@@ -1,19 +1,8 @@
-preparar :- consult('encontrar_signo.pl').
+preparar :- consult('encontrar_signo.pl'), consult('memoria.pl'), !.
+
 :-dynamic pessoa/2.
 :-dynamic signos/2.
 :-dynamic signo/2.
-
-esquecer(T) :- esquecer1(T), fail.
-esquecer(T).
-
-esquecer1(T) :- retract(T).
-esquecer1(T).
-
-memorizar(T) :- esquecer(T),assert(T).
-memorizar(T) :- assert(T).
-
-
-
 
 execute :- write('Seja bem vindo ao plano astrológico!'), nl, write('Para começar, por favor diga-nos o seu nome: '),
 	   read(NomeDoIndividuo), write('Que bom ter você conosco, '), write(NomeDoIndividuo), write('!!!'), nl,
