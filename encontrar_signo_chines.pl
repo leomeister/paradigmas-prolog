@@ -107,3 +107,13 @@ signos_chineses(X, porco) :- X >= 19350204, X =< 19360123;
                             X >= 20190205, X =< 20200124.
                             
 signoChines(Nome, Signo) :- pessoa(Nome, Y), signos_chineses(Y, Signo).
+
+encontrar_signo_chines(NomeDoIndividuo) :- write('Vamos encontrar o seu signo chinês!'), nl, 
+                                           write('Digite, em formato numérico, o dia de seu nascimento: '), read(Dia), 
+                                           write('Agora, digite o mês de seu nascimento: '), read(Mes), 
+                                           write('Por fim, digite o ano de seu nascimento: '), read(Ano), 
+                                           Resultado is (10000 * Ano + 100 * Mes + Dia), nl,
+                                           memorizar(pessoa(NomeDoIndividuo, Resultado)), memorizar(signoChines(NomeDoIndividuo, _)), 
+                                           signoChines(NomeDoIndividuo, Signo),
+                                           write(NomeDoIndividuo), write(', segundo nossos cálculos, seu signo é '), write(Signo), 
+                                           write(', legal, não?'), nl, !.

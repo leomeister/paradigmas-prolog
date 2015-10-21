@@ -12,3 +12,12 @@ signos(X, sagitario) :- X >= 1122, X =< 1221, !.
 signos(X, capricornio).
 
 signo(Nome, Signo) :- pessoa(Nome, Y), signos(Y, Signo).
+
+encontrar_signo(NomeDoIndividuo) :-write('Vamos encontrar o seu signo!'), nl, 
+                                   write('Digite, em formato numérico, o dia de seu nascimento: '), read(Dia), 
+                                   write('Agora, digite o mês de seu nascimento: '), read(Mes), 
+                                   Resultado is (100 * Mes + Dia), nl,
+	                               memorizar(pessoa(NomeDoIndividuo, Resultado)), memorizar(signo(NomeDoIndividuo, _)), 
+	                               signo(NomeDoIndividuo, Signo),
+	                               write(NomeDoIndividuo), write(', segundo nossos cálculos, seu signo é '), write(Signo), 
+	                               write(', legal, não?'), nl, !.
