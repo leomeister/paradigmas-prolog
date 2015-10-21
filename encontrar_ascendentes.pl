@@ -81,3 +81,59 @@ ascendentes(Hora, SignoGrego, libra) :- Hora >= 631, Hora =< 830, SignoGrego == 
 					Hora >= 431, Hora =< 630, SignoGrego == libra, !;
 					Hora >= 2431, SignoGrego == sagitario, !;
 					Hora =< 230, SignoGrego == sagitario, !;
+ 
+ascendentes(Hora, SignoGrego, escorpiao) :- Hora >= 631, Hora =< 830, SignoGrego == libra, !;
+					    Hora >= 831, Hora =< 1030, SignoGrego == virgem, !;
+					    Hora >= 1031, Hora =< 1230, SignoGrego == leao, !;
+					    Hora >= 1231, Hora =< 1430, SignoGrego == cancer, !;
+					    Hora >= 1430, Hora =< 1630, SignoGrego == gemeos, !;
+					    Hora >= 1631, Hora =< 1830, SignoGrego == touro, !;
+					    Hora >= 1831, Hora =< 2030, SignoGrego == aries, !;
+					    Hora >= 2031, Hora =< 2230, SignoGrego == peixes, !;
+					    Hora >= 2231, Hora =< 2430, SignoGrego == aquario, !;
+					    Hora >= 231, Hora =< 430, SignoGrego == sagitario, !;
+					    Hora >= 431, Hora =< 630, SignoGrego == escorpiao, !;
+					    Hora >= 2431, SignoGrego == capricornio, !;
+					    Hora =< 230, SignoGrego == capricornio, !;
+
+ascendentes(Hora, SignoGrego, sagitario) :- Hora >= 631, Hora =< 830, SignoGrego == escorpiao, !;
+					    Hora >= 831, Hora =< 1030, SignoGrego == libra, !;
+					    Hora >= 1031, Hora =< 1230, SignoGrego == virgem, !;
+					    Hora >= 1231, Hora =< 1430, SignoGrego == leao, !;
+					    Hora >= 1430, Hora =< 1630, SignoGrego == cancer, !;
+					    Hora >= 1631, Hora =< 1830, SignoGrego == gemeos, !;
+					    Hora >= 1831, Hora =< 2030, SignoGrego == touro, !;
+					    Hora >= 2031, Hora =< 2230, SignoGrego == aries, !;
+					    Hora >= 2231, Hora =< 2430, SignoGrego == peixes, !;
+					    Hora >= 231, Hora =< 430, SignoGrego == capricornio, !;
+					    Hora >= 431, Hora =< 630, SignoGrego == sagitario, !;
+					    Hora >= 2431, SignoGrego == aquario, !;
+					    Hora =< 230, SignoGrego == aquario, !.
+
+ascendente(Hora, SignoGrego, capricornio) :- Hora >= 631, Hora =< 830, SignoGrego == sagitario, !;
+					     Hora >= 831, Hora =< 1030, SignoGrego == escorpiao, !;
+					     Hora >= 1031, Hora =< 1230, SignoGrego == libra, !;
+					     Hora >= 1231, Hora =< 1430, SignoGrego == virgem, !;
+					     Hora >= 1430, Hora =< 1630, SignoGrego == leao, !;
+					     Hora >= 1631, Hora =< 1830, SignoGrego == cancer, !;
+					     Hora >= 1831, Hora =< 2030, SignoGrego == gemeos, !;
+					     Hora >= 2031, Hora =< 2230, SignoGrego == touro, !;
+					     Hora >= 2231, Hora =< 2430, SignoGrego == aries, !;
+					     Hora >= 231, Hora =< 430, SignoGrego == aquario, !;
+					     Hora >= 431, Hora =< 630, SignoGrego == capricornio, !;
+					     Hora >= 2431, SignoGrego == peixes, !;
+					     Hora =< 230, SignoGrego == peixes, !.
+
+ascendentes(Hora, SignoGrego, aquario) :- Hora >= 631, Hora =< 830, SignoGrego == capricornio, !;
+					  Hora >= 831, Hora =< 1030, SignoGrego == sagitario, !;
+					  Hora >= 1031, Hora =< 1230, SignoGrego == escorpiao, !;
+					  Hora >= 1231, Hora =< 1430, SignoGrego == libra, !;
+					  Hora >= 1430, Hora =< 1630, SignoGrego == virgem, !;
+					  Hora >= 1631, Hora =< 1830, SignoGrego == leao, !;
+					  Hora >= 1831, Hora =< 2030, SignoGrego == cancer, !;
+					  Hora >= 2031, Hora =< 2230, SignoGrego == gemeos, !;
+					  Hora >= 2231, Hora =< 2430, SignoGrego == touro, !;
+					  Hora >= 231, Hora =< 430, SignoGrego == peixes, !;
+					  Hora >= 431, Hora =< 630, SignoGrego == aquario, !;
+					  Hora >= 2431, SignoGrego == aries, !;
+					  Hora =< 230, SignoGrego == aries, !.
