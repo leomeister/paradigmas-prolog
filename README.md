@@ -18,13 +18,14 @@
 # Observações
 
 * Embora funcione normalmente, o programa está retornando o seguinte erro:
-'''
+
+```
 Warning: /home/ubuntu/workspace/paradigmas-prolog/encontrar_signo.pl:12:
         Singleton variables: [X]
 Warning: /home/ubuntu/workspace/paradigmas-prolog/memoria.pl:2:
         Singleton variables: [T]
 Warning: /home/ubuntu/workspace/paradigmas-prolog/memoria.pl:5:
         Singleton variables: [T]
-'''
+```
 
 * Uma vez que uma pessoa procure seu signo, qualquer outra pessoa com mesmo nome vai sempre ter como retorno aquele signo, independente da data que inserir.
