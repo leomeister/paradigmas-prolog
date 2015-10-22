@@ -1,8 +1,11 @@
-preparar :- consult([encontrar_signo, encontrar_signo_chines, menu, memoria]),!.
+preparar :- consult([encontrar_signo, encontrar_signo_chines, encontrar_ascendente, menu, memoria]),!.
 
 :-dynamic pessoa/2.
+:-dynamic horario/2.
 :-dynamic signos/2.
 :-dynamic signo/2.
+:-dynamic ascendentes/3.
+:-dynamic ascendente/2.
 :-dynamic signos_chineses/2.
 :-dynamic signoChines/2.
 

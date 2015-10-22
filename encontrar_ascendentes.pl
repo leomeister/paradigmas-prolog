@@ -66,7 +66,7 @@ ascendente(Hora, SignoGrego, virgem) :- Hora >= 631, Hora =< 830, SignoGrego == 
 					Hora >= 231, Hora =< 430, SignoGrego == libra, !;
 					Hora >= 431, Hora =< 630, SignoGrego == virgem, !;
 					Hora >= 2431, SignoGrego == escorpiao, !;
-					Hora =< 230, SignoGrego == escorpiao, !;
+					Hora =< 230, SignoGrego == escorpiao, !.
 
 ascendentes(Hora, SignoGrego, libra) :- Hora >= 631, Hora =< 830, SignoGrego == virgem, !;
 					Hora >= 831, Hora =< 1030, SignoGrego == leao, !;
@@ -80,7 +80,7 @@ ascendentes(Hora, SignoGrego, libra) :- Hora >= 631, Hora =< 830, SignoGrego == 
 					Hora >= 231, Hora =< 430, SignoGrego == escorpiao, !;
 					Hora >= 431, Hora =< 630, SignoGrego == libra, !;
 					Hora >= 2431, SignoGrego == sagitario, !;
-					Hora =< 230, SignoGrego == sagitario, !;
+					Hora =< 230, SignoGrego == sagitario, !.
  
 ascendentes(Hora, SignoGrego, escorpiao) :- Hora >= 631, Hora =< 830, SignoGrego == libra, !;
 					    Hora >= 831, Hora =< 1030, SignoGrego == virgem, !;
@@ -94,7 +94,7 @@ ascendentes(Hora, SignoGrego, escorpiao) :- Hora >= 631, Hora =< 830, SignoGrego
 					    Hora >= 231, Hora =< 430, SignoGrego == sagitario, !;
 					    Hora >= 431, Hora =< 630, SignoGrego == escorpiao, !;
 					    Hora >= 2431, SignoGrego == capricornio, !;
-					    Hora =< 230, SignoGrego == capricornio, !;
+					    Hora =< 230, SignoGrego == capricornio, !.
 
 ascendentes(Hora, SignoGrego, sagitario) :- Hora >= 631, Hora =< 830, SignoGrego == escorpiao, !;
 					    Hora >= 831, Hora =< 1030, SignoGrego == libra, !;
@@ -166,13 +166,13 @@ ascendentes(Hora, SignoGrego, aries) :- Hora >= 631, Hora =< 830, SignoGrego == 
 					Hora >= 2431, SignoGrego == gemeos, !;
 					Hora =< 230, SignoGrego == gemeos.
 
-ascendente(Nome, Ascendente) :- pessoa(Nome, Y), ascendentes(HoraDeNascimento, Signo, Ascendente).
+ascendente(NomeDoIndividuo, SignoAscendente) :- horario(NomeDoIndividuo, ResultadoAscendente),
+						signo(NomeDoIndividuo, Signo), ascendentes(ResultadoAscendente, Signo, SignoAscendente).
 
 encontrar_ascendente(NomeDoIndividuo) :- write('Vamos encontrar o seu ascendente!'), nl, 
                                    write('Digite, no formato de 24h, a hora de seu nascimento: '), read(HoraDeNascimento), 
                                    write('Agora, digite os minutos: '), read(MinutoDeNascimento), 
-                                   ResultadoAscendente is (100 * HoraDeNascimento + MinutoDeNascimento), nl,
-				   signo(NomeDoIndividuo, Signo), ascendentes(ResultadoAscendente, Signo, Ascendente),
-	                           memorizar(ascendente(NomeDoIndividuo, _)), ascendente(NomeDoIndividuo, Signo),
-	                               write(NomeDoIndividuo), write(', segundo nossos cálculos, seu signo é '), write(Signo), 
+                                   ResultadoAscendente is (100 * HoraDeNascimento + MinutoDeNascimento), nl, memorizar(horario(NomeDoIndividuo, ResultadoAscendente)),
+				   memorizar(ascendente(NomeDoIndividuo, _)), ascendente(NomeDoIndividuo, SignoAscendente),
+	                               write(NomeDoIndividuo), write(', segundo nossos cálculos, seu ascendente é '), write(SignoAscendente), 
 	                               write(', legal, não?'), nl, !.
