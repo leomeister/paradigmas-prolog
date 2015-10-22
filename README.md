@@ -14,8 +14,8 @@
 - [ ] Implementar validações para dias, meses e anos.
 - [ ] Atualizar tabela de Pessoa, para incluir signo grego e chinês.
 - [x] Implementar menu.
-- [ ] Implementar função para trocar usuário atual.
-- [ ] Eliminar redundâncias.
+- [x] Implementar função para trocar usuário atual.
+- [x] Eliminar redundâncias.
  
 
 # Observações

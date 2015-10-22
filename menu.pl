@@ -10,10 +10,10 @@ menu(NomeDoIndividuo) :- repeat, nl,
                 		 opção(NomeDoIndividuo,X),
                 		 X==0, !.
 		
-opção(_,0) :- !.
+opção(_,0) :- halt(0).
 opção(NomeDoIndividuo,1) :- encontrar_signo(NomeDoIndividuo), !.
 opção(NomeDoIndividuo,2) :- encontrar_ascendente(NomeDoIndividuo), !.
 opção(NomeDoIndividuo,3) :- encontrar_signo_chines(NomeDoIndividuo), !.
 opção(_,4) :- write('Não implementado'), !.
-opção(_,5) :- write('Não implementado'), !.
+opção(NomeDoIndividuo,5) :- trocar_usuario(NomeDoIndividuo), !.
 opção(_,_) :- write('Opção inválida'), !.
