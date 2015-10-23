@@ -16,6 +16,7 @@
 - [x] Implementar menu.
 - [x] Implementar função para trocar usuário atual.
 - [x] Eliminar redundâncias.
+- [ ] Consertar signos ascendentes.
  
 
 # Observações
