@@ -9,7 +9,7 @@
 - [x] Encontrar signo ascendente.
 - [ ] Retornar descrição/características do signo.
 - [ ] Encontrar pessoas compatíveis de acordo com seus signos.
-- [ ] Mostrar imagem do signo (se possível).
+- [ ] ~~Mostrar imagem do signo (se possível).~~
 - [ ] ~~Simular uma batalha do usuário com outras pessoas pela sagrada armadura de ouro do signo (apenas grego).~~
 - [ ] Implementar validações para dias, meses e anos.
 - [ ] Atualizar tabela de Pessoa, para incluir signo grego e chinês.

@@ -14,6 +14,7 @@ menu(NomeDoIndividuo) :- repeat, nl,
 opção(_,0) :- halt(0).
 opção(NomeDoIndividuo,1) :- encontrar_signo(NomeDoIndividuo), !.
 opção(NomeDoIndividuo,2) :- encontrar_ascendente(NomeDoIndividuo), !.
+opção(NomeDoIndividuo,3) :- descricao(NomeDoIndividuo), !.
 opção(NomeDoIndividuo,4) :- encontrar_signo_chines(NomeDoIndividuo), !.
 opção(_,5) :- write('Não implementado'), !.
 opção(NomeDoIndividuo,6) :- trocar_usuario(NomeDoIndividuo), !.

@@ -167,7 +167,7 @@ ascendentes(Hora, SignoGrego, aries) :- Hora >= 631, Hora =< 830, SignoGrego == 
 					Hora =< 230, SignoGrego == gemeos.
 
 ascendente(NomeDoIndividuo, SignoAscendente) :- horario(NomeDoIndividuo, ResultadoAscendente),
-						signo(NomeDoIndividuo, Signo), ascendentes(ResultadoAscendente, Signo, SignoAscendente).
+						pessoa(NomeDoIndividuo, Signo,_), ascendentes(ResultadoAscendente, Signo, SignoAscendente).
 
 encontrar_ascendente(NomeDoIndividuo) :- write('Vamos encontrar o seu ascendente!'), nl, 
                                    write('Digite, no formato de 24h, a hora de seu nascimento: '), read(HoraDeNascimento), 
