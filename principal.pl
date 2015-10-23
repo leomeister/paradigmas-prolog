@@ -1,4 +1,4 @@
-preparar :- consult([encontrar_signo, encontrar_signo_chines, encontrar_ascendentes, trocar_usuario, descricao_signo, menu, memoria]),!.
+preparar :- use_module(library(random)), consult([encontrar_signo, encontrar_signo_chines, encontrar_ascendentes, trocar_usuario, descricao_signo, menu, memoria]),!.
 
 :-dynamic pessoa/3.
 :-dynamic horario/2.

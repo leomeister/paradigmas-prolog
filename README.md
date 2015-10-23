@@ -7,7 +7,7 @@
 - [x] Encontrar signo grego.
 - [x] Encontrar signo chinês.
 - [x] Encontrar signo ascendente.
-- [ ] Retornar descrição/características do signo.
+- [x] Retornar descrição/características do signo.
 - [ ] Encontrar pessoas compatíveis de acordo com seus signos.
 - [ ] ~~Mostrar imagem do signo (se possível).~~
 - [ ] ~~Simular uma batalha do usuário com outras pessoas pela sagrada armadura de ouro do signo (apenas grego).~~
@@ -16,7 +16,7 @@
 - [x] Implementar menu.
 - [x] Implementar função para trocar usuário atual.
 - [x] Eliminar redundâncias.
-- [ ] Consertar signos ascendentes.
+- [x] Consertar signos ascendentes.
  
 
 # Observações
